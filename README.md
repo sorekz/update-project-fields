@@ -1,4 +1,4 @@
-### **This is a fork from https://github.com/titoportas/update-project-fields with changes to work on GHES**
+#### **This is a fork from https://github.com/titoportas/update-project-fields with changes to work on GHES**
 
 Use this action to automatically update [GitHub project (beta)](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects) item fields.
 Note that this action *does not support [GitHub projects (classic)](https://docs.github.com/en/issues/organizing-your-work-with-project-boards)*.
