@@ -1,4 +1,4 @@
-# titoportas/update-project-fields
+### **This is a fork from https://github.com/titoportas/update-project-fields with changes to work on GHES**
 
 Use this action to automatically update [GitHub project (beta)](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects) item fields.
 Note that this action *does not support [GitHub projects (classic)](https://docs.github.com/en/issues/organizing-your-work-with-project-boards)*.
@@ -33,12 +33,12 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/add-to-project@v0.3.0 # This adds the issue to the project
         with:
-          project-url: https://github.com/users/titoportas/projects/2
+          project-url: https://github.com/users/sorekz/projects/2
           github-token: ${{ secrets.GHPROJECT_SECRET }}
         id: add-project
-      - uses: titoportas/update-project-fields@v0.1.0
+      - uses: sorekz/update-project-fields@v1
         with:
-          project-url: https://github.com/users/titoportas/projects/2
+          project-url: https://github.com/users/sorekz/projects/2
           github-token: ${{ secrets.GHPROJECT_SECRET }}
           item-id: ${{ steps.add-project.outputs.itemId }} # Use the item-id output of the previous step
           field-keys: TextField,NumberField,FinishedAt,Size,IterationField
@@ -72,7 +72,7 @@ Note that this action runs in Node.js 16.x, so we recommend using that version
 of Node (see "engines" in this action's package.json for details).
 
 ```shell
-> git clone https://github.com/titoportas/update-project-fields.git
+> git clone https://github.com/sorekz/update-project-fields.git
 > cd update-project-fields
 > npm install
 ```
